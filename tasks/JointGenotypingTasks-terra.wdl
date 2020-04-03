@@ -177,7 +177,7 @@ task GenotypeGVCFs {
       -D ~{dbsnp_vcf} \
       -G StandardAnnotation -G AS_StandardAnnotation \
       --only-output-calls-starting-in-intervals \
-      --use-new-qual-calculator \
+      ##--use-new-qual-calculator \ ##workflow throws error because no input specified after declaring##
       -V gendb://$WORKSPACE \
       -L ~{interval} \
       ~{true='--allow-old-rms-mapping-quality-annotation-data' false='' allow_old_rms_mapping_quality_annotation_data} \
