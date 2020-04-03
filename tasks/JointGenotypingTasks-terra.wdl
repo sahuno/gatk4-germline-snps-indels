@@ -247,8 +247,6 @@ task GnarlyGenotyper {
       -O ~{output_vcf_filename} \
       --output-database-name annotationDB.vcf.gz \
       -D ~{dbsnp_vcf} \
-      --only-output-calls-starting-in-intervals \
-      --use-new-qual-calculator \
       -V gendb://$WORKSPACE \
       -L ~{interval} \
       -stand-call-conf 10 \
